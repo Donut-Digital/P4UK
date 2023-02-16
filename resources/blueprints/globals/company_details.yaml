@@ -42,54 +42,38 @@ sections:
           visibility: visible
           always_save: false
       -
-        handle: facebook
+        handle: telephone
         field:
           input_type: text
           antlers: false
-          display: Facebook
+          display: Telephone
           type: text
           icon: text
-          width: 25
+          width: 33
           listable: hidden
           instructions_position: above
           visibility: visible
-          always_save: false
       -
-        handle: twitter
+        handle: out_of_hours_contact
         field:
           input_type: text
           antlers: false
-          display: Twitter
+          display: 'Out Of Hours Contact'
           type: text
           icon: text
-          width: 25
+          width: 33
           listable: hidden
           instructions_position: above
           visibility: visible
-          always_save: false
       -
-        handle: instagram
+        handle: email
         field:
           input_type: text
           antlers: false
-          display: Instagram
+          display: email
           type: text
           icon: text
-          width: 25
+          width: 33
           listable: hidden
           instructions_position: above
           visibility: visible
-          always_save: false
-      -
-        handle: linkedin
-        field:
-          input_type: text
-          antlers: false
-          display: LinkedIn
-          type: text
-          icon: text
-          width: 25
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false

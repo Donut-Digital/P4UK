@@ -1,7 +1,7 @@
 ---
-id: 519986ba-4c76-4323-a685-ef4d63f0b62d
+id: b0d08587-f121-475b-96ea-2c0ff7f14046
 blueprint: page
-title: 'Contact Us'
-updated_by: 1
-updated_at: 1673024628
+title: Contact
+updated_by: 2
+updated_at: 1676583249
 ---

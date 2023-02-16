@@ -3,4 +3,62 @@ sections:
     display: Main
     fields:
       -
-        import: icon
+        handle: title
+        field:
+          input_type: text
+          antlers: false
+          display: Title
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: label
+        field:
+          input_type: text
+          antlers: false
+          display: Label
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: icon
+        field:
+          options:
+            bone: Bone
+            joystick: Joystick
+            flame: Flame
+          multiple: false
+          max_items: 1
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Icon
+          type: select
+          icon: select
+          width: 25
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: support_color
+        field:
+          theme: classic
+          lock_opacity: false
+          default_color_mode: HEXA
+          color_modes:
+            - hex
+          display: 'Support Color'
+          type: color
+          icon: color
+          width: 25
+          listable: hidden
+          instructions_position: above
+          visibility: visible

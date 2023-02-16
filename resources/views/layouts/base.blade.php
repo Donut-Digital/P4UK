@@ -9,7 +9,6 @@
 
     <!-- Styles -->
     <link type='text/css' href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-    @include('styles.custom_variables')
 
     <!-- Fonts -->
 

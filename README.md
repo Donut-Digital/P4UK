@@ -1,8 +1,6 @@
-LVTS
+LTS
 
 Laravel
-
-Vue
 
 Tailwind 
 
