@@ -19,26 +19,3 @@ sections:
           visibility: visible
           always_save: false
           width: 50
-      -
-        handle: links_direction
-        field:
-          options:
-            right: Right
-            left: Left
-            center: Center
-          multiple: false
-          max_items: 1
-          clearable: false
-          searchable: true
-          taggable: false
-          push_tags: false
-          cast_booleans: false
-          default: right
-          display: 'Links Direction'
-          type: select
-          icon: select
-          width: 50
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false

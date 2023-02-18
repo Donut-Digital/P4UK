@@ -31,7 +31,7 @@ sections:
         field:
           options:
             bone: Bone
-            joystick: Joystick
+            gamepad: gamepad
             flame: Flame
           multiple: false
           max_items: 1

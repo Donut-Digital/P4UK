@@ -1,43 +1,59 @@
 
-<nav class="px-10 lg:px-20 py-4 items-center bg-white shadow-md">
+<nav class="py-5 relative px-5 md:px-0">
 
-    <div class="container mx-auto md:px-16 flex flex-wrap items-center">
-
-        <a href="/" class="flex items-center">
+    <div class="container m-auto flex justify-between">
+        <a href="/" aria-label="return to P4UK homepage">
             @if($navigation_settings['company_logo'])
-                <img src="{{ $navigation_settings['company_logo']['permalink'] }}" class="mr-3 h-6 sm:h-10">
+                <img src="{{ $navigation_settings['company_logo']['permalink'] }}" alt="{{ $navigation_settings['company_logo']['alt'] }}" class=" mr-20 w-28 h-28">
             @endif
         </a>
+
+        <div id="desktop-menu" class="hidden lg:flex w-full">
+            <ul class="flex flex-row w-full">
+
+                <li class="flex items-center w-full group cursor-pointer">
+                    <div class="w-full block">
+                        <i class="opacity-0 group-hover:opacity-100 text-primary w-full text-center fa-solid fa-phone transition-all ease-in-out duration-300"></i>
+                        <h2 class="w-full text-center group-hover:text-primary transition-all ease-in-out duration-300">Call us today</h2>
+                        <p class="w-full text-center">{{ $company_details['telephone'] }}</p>
+                    </div>
+                </li>
+
+                @foreach(Statamic::tag('nav:main_navigation') as $item)
+                    <li class="flex items-center w-full group" data-sup-col="{{$item['support_color']}}">
+                        <a href="{{ $item['url'] }}" class="w-full block" style="color:{{$item['support_color']}}">
+
+                            @if($item['icon'] == 'flame')
+                                <i class="opacity-0 group-hover:opacity-100 w-full text-center fa-sharp fa-solid fa-fire-flame-curved transition-all ease-in-out duration-300 group-hover:text-current"></i>
+                            @elseif($item['icon'] == 'bone')
+                                <i class="opacity-0 group-hover:opacity-100 w-full text-center fa-solid fa-bone transition-all ease-in-out duration-300 group-hover:text-current"></i>
+                            @elseif($item['icon'] == 'gamepad')
+                                <i class="opacity-0 group-hover:opacity-100 w-full text-center fa-solid fa-gamepad transition-all ease-in-out duration-300 group-hover:text-current"></i>
+                            @endif
+
+                            <h2 class="w-full text-center group-hover:text-current transition-all ease-in-out duration-300">{{ $item['title'] }}</h2>
+                            <p class="w-full text-center">{{ $item['label'] }}</p>
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
 
         <button id="menu-btn" type="button" class="inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg lg:hidden hover:text-gray-900 focus:outline-none">
             <span class="sr-only">Open main menu</span>
             @includeIf('SVGs.menu')
         </button>
-
-        <div id="desktop-menu" class="hidden lg:block w-auto">
-            <ul class="flex flex-col lg:flex-row p-2 mt-0 bg-gray-50 rounded-lg border border-gray-100 space-x-10 text-sm font-medium lg:border-0 lg:bg-white">
-                @foreach(Statamic::tag('nav:main_navigation') as $item)
-                    <li class="flex items-center w-full py-2">
-                        <a href="{{ $item['url'] }}" class="w-full block py-2 pr-4 pl-3 rounded lg:p-0 inline-flex justify-between">
-                            <span class="whitespace-nowrap">{{ $item['title'] }}</span>
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-
-        <div id="mobile-menu" class="hidden block w-full h-full">
-            <ul class="flex flex-col p-2 mt-0 text-sm font-medium">
-                @foreach(Statamic::tag('nav:main_navigation') as $item)
-                    <li class="flex items-center w-full py-2">
-                        <a href="{{ $item['url'] }}" class="w-full block py-2 pr-4 pl-3 rounded lg:p-0 inline-flex justify-between">
-                            <span class="whitespace-nowrap m-auto">{{ $item['title'] }}</span>
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-
     </div>
 
+    <div id="mobile-menu" class="hidden block w-full absolute bg-white">
+        <ul class="flex flex-col p-2 mt-0 text-sm font-medium">
+            @foreach(Statamic::tag('nav:main_navigation') as $item)
+                <li class="flex items-center w-full py-2">
+                    <a href="{{ $item['url'] }}" class="w-full block py-2 pr-4 pl-3 rounded lg:p-0 inline-flex justify-between">
+                        <span class="whitespace-nowrap m-auto">{{ $item['title'] }}</span>
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </div>
 </nav>

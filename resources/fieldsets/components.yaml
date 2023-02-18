@@ -6,7 +6,21 @@ fields:
       collapse: true
       previews: true
       sets:
-
+        cta_banner:
+          display: 'CTA Banner'
+          fields:
+            -
+              import: cta_banner
+        brands:
+          display: Brands
+          fields:
+            -
+              import: brands
+        contact_form:
+          display: 'Contact Form'
+          fields:
+            -
+              import: contact_form
       display: Components
       type: replicator
       icon: replicator

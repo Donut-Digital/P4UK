@@ -1,24 +1,20 @@
 tree:
   -
-    id: 9b0c3664-de6e-4975-b553-8491f377e2d8
-    entry: e4cc9f35-d499-48a2-9ae1-4ff4a442ad5d
-    title: Home
-  -
     id: 694c91ad-93a4-4651-afa4-654bb27ccd02
     title: Passion4Events
     url: 'https://p4events.co.uk'
     data:
       label: 'Bespoke Event Management'
       icon: flame
-      support_color: '#F01D4F'
+      support_color: '#BD2121'
   -
     id: 1411ebb2-2b7a-4f5e-9765-28d299e4714c
     title: 'Arcade Direct'
     url: 'https://www.arcadedirect.co.uk'
     data:
       label: 'The Hire Specialists'
-      icon: joystick
-      support_color: '#21E40A'
+      icon: gamepad
+      support_color: '#6B6B6B'
   -
     id: 85e8fe22-902b-48b2-b329-ffe6377e2b46
     title: 'Pet Hamper'
@@ -26,4 +22,4 @@ tree:
     data:
       label: 'Luxury Pet Gifts'
       icon: bone
-      support_color: '#E0B43E'
+      support_color: '#E4BE96'

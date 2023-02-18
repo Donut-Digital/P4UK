@@ -6,11 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="P4UK">
+    <meta name="keywords" content="Pet Hamper, Arcade Direct, Passion4events">
+    <meta name="author" content="Nathan Williams">
 
     <!-- Styles -->
     <link type='text/css' href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+    @include('styles.custom_variables')
 
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
+              rel="stylesheet"
+              type="text/css"/>
+    </noscript>
+
+
+    <!-- Font Awesome -->
+    <script defer src="https://kit.fontawesome.com/713e0a7437.js" crossorigin="anonymous"></script>
 
     <!-- Title -->
     <title>{{ $company_details['company_name'] }}</title>

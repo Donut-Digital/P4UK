@@ -3,18 +3,6 @@ sections:
     display: Main
     fields:
       -
-        handle: name
-        field:
-          input_type: text
-          antlers: false
-          display: Name
-          type: text
-          icon: text
-          listable: true
-          instructions_position: above
-          visibility: visible
-          always_save: false
-      -
         handle: email
         field:
           input_type: text
@@ -27,6 +15,17 @@ sections:
           visibility: visible
           always_save: false
       -
+        handle: subject
+        field:
+          input_type: text
+          antlers: false
+          display: Subject
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
         handle: message
         field:
           antlers: false
@@ -34,18 +33,6 @@ sections:
           type: textarea
           icon: textarea
           listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false
-      -
-        handle: origin
-        field:
-          input_type: text
-          antlers: false
-          display: Origin
-          type: text
-          icon: text
-          listable: true
           instructions_position: above
           visibility: visible
           always_save: false

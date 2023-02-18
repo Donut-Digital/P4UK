@@ -1,0 +1,7 @@
+title: 'Theme Settings'
+data:
+  primary_colour: '#B81A1C'
+  secondary_colour: '#E6E6E6'
+  typo_primary_colour: '#333333'
+  typo_secondary_colour: '#5C6B80'
+  typo_support_colour: '#931011'
