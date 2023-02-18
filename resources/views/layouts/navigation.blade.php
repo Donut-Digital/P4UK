@@ -39,13 +39,22 @@
             </ul>
         </div>
 
-        <button id="menu-btn" type="button" class="inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg lg:hidden hover:text-gray-900 focus:outline-none">
-            <span class="sr-only">Open main menu</span>
-            @includeIf('SVGs.menu')
+        <button id="menu-btn" type="button" class="text-gray-400 hover:text-gray-900 lg:hidden">
+
+            <div class="relative w-8 h-8">
+                <div id="menu-btn-1" class="absolute transition-all ease-in-out duration-300">
+                    @includeIf('SVGs.menu')
+                </div>
+
+                <div id="menu-btn-2" class="rotate-90 absolute transition-all ease-in-out duration-300 opacity-0">
+                    @includeIf('SVGs.menu')
+                </div>
+            </div>
+
         </button>
     </div>
 
-    <div id="mobile-menu" class="hidden block w-full absolute bg-white">
+    <div id="mobile-menu" class="hidden block w-full absolute bg-white left-0">
         <ul class="flex flex-col p-2 mt-0 text-sm font-medium">
             @foreach(Statamic::tag('nav:main_navigation') as $item)
                 <li class="flex items-center w-full py-2">
