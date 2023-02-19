@@ -54,7 +54,7 @@
         </button>
     </div>
 
-    <div id="mobile-menu" class="hidden block w-full absolute bg-white left-0">
+    <div id="mobile-menu" class="hidden block w-full absolute bg-white left-0 shadow-md">
         <ul class="flex flex-col p-2 mt-0 text-sm font-medium">
             @foreach(Statamic::tag('nav:main_navigation') as $item)
                 <li class="flex items-center w-full py-2">
