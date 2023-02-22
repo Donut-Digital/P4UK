@@ -11,13 +11,15 @@
         <div id="desktop-menu" class="hidden lg:flex w-full">
             <ul class="flex flex-row w-full">
 
-                <li class="flex items-center w-full group cursor-pointer">
-                    <div class="w-full block">
-                        <i class="opacity-0 group-hover:opacity-100 text-primary w-full text-center fa-solid fa-phone transition-all ease-in-out duration-300"></i>
-                        <h2 class="w-full text-center group-hover:text-primary transition-all ease-in-out duration-300">Call us today</h2>
-                        <p class="w-full text-center">{{ $company_details['telephone'] }}</p>
-                    </div>
-                </li>
+                @if($company_details['telephone'])
+                    <li class="flex items-center w-full group cursor-pointer">
+                        <div class="w-full block">
+                            <i class="opacity-0 group-hover:opacity-100 text-primary w-full text-center fa-solid fa-phone transition-all ease-in-out duration-300"></i>
+                            <h2 class="w-full text-center group-hover:text-primary transition-all ease-in-out duration-300">Call us today</h2>
+                            <p class="w-full text-center">{{ $company_details['telephone'] }}</p>
+                        </div>
+                    </li>
+                @endif
 
                 @foreach(Statamic::tag('nav:main_navigation') as $item)
                     <li class="flex items-center w-full group" data-sup-col="{{$item['support_color']}}">
