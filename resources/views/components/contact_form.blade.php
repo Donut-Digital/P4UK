@@ -2,7 +2,7 @@
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-typo-primary">{{ $component['title'] }}</h2>
         <p class="mb-8 lg:mb-16 font-light text-center text-typo-secondary sm:text-xl">{{ $component['description'] }}</p>
-        <form action="/!/forms/contact_form" class="space-y-8">
+        <form method="post" action="/!/forms/contact_form" class="space-y-8">
             <div>
                 <label for="email" class="block mb-2 text-sm font-medium text-typo-primary">Your email</label>
                 <input type="email" id="email" class="block p-2.5 w-full text-sm text-typo-primary bg-gray-50 rounded-lg border border-gray-300 shadow-sm" placeholder="name@flowbite.com" required>
