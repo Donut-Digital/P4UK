@@ -21,6 +21,6 @@ footer span { @apply text-typo-support; }
 #brands p { @apply text-center text-typo-secondary; }
 
 #brands .brand h2, #brands .brand p, #brands .brand a { @apply text-white }
-#brands .brand h2 { @apply text-[28px] }
-#brands .brand p { @apply text-[16px] }
-#brands .brand a { @apply font-semibold text-[17px] }
+#brands .brand h2 { @apply text-[24px] lg:text-[24px] xl:text-[28px] }
+#brands .brand p { @apply text-[14px] lg:text-[12px] xl:text-[16px] }
+#brands .brand a { @apply font-semibold text-[15px] lg:text-[14px] xl:text-[17px] }
