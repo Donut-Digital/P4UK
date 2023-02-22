@@ -1,5 +1,5 @@
 
-<nav class="py-5 relative px-5 md:px-0">
+<nav class="relative p-5">
 
     <div class="container m-auto flex justify-between">
         <a href="/" aria-label="return to P4UK homepage">
