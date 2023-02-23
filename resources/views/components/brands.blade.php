@@ -14,7 +14,7 @@
                     <a class="border-2 border-white w-max m-auto py-2.5 px-5" href="{{ $brand['brand_link'] }}">{{ $brand['brand_link_label'] }}</a>
                 </div>
 
-                <img class="h-full object-cover" src="{{$brand['brand_image']['permalink']}}" alt="{{ $brand['brand_image']['alt'] }}" width="900" height="1600">
+                <img class="h-full object-cover" src="{{ $brand['brand_image']['permalink'] }}" alt="{{ $brand['brand_image']['alt'] }}" width="900" height="1600">
 
                 <div class="hidden lg:block absolute z-10 top-0 left-0 w-full h-full px-4">
                     <div class="w-full h-full opacity-0 group-hover:opacity-90 transition-all ease-in-out duration-500" style="background-color: {{ $brand['brand_colour'] }}">

@@ -16,7 +16,6 @@ window.addEventListener("load", function()
     });
 
     // sub menus
-
     const sub_menus = document.querySelectorAll(".mobile-dropdown-trigger");
 
     sub_menus.forEach(sub_menu =>
