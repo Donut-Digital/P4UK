@@ -22,12 +22,17 @@
           href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
           as="style"
           onload="this.onload=null;this.rel='stylesheet'"/>
+
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
               rel="stylesheet"
               type="text/css"/>
     </noscript>
 
+    <!-- favicon -->
+    @if($company_details['favicon'])
+        <link rel="icon" type="image/x-icon" href="{{ $company_details['favicon']['permalink'] }}">
+    @endif
 
     <!-- Font Awesome -->
     <script defer src="https://kit.fontawesome.com/713e0a7437.js" crossorigin="anonymous"></script>

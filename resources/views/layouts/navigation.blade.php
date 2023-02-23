@@ -3,8 +3,8 @@
 
     <div class="container m-auto flex justify-between">
         <a href="/" aria-label="return to P4UK homepage">
-            @if($navigation_settings['company_logo'])
-                <img src="{{ $navigation_settings['company_logo']['permalink'] }}" alt="{{ $navigation_settings['company_logo']['alt'] }}" class=" mr-20 w-28 h-28">
+            @if($company_details['logo'])
+                <img src="{{ $company_details['logo']['permalink'] }}" alt="{{ $company_details['logo']['alt'] ?? '' }}" class="mr-20 w-28 h-28 mx-5">
             @endif
         </a>
 
