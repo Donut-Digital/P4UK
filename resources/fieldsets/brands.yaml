@@ -67,6 +67,8 @@ fields:
             instructions_position: above
             visibility: visible
             max_files: 1
+            validate:
+              - required
         -
           handle: brand_description
           field:
