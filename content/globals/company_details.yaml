@@ -1,5 +1,7 @@
 title: 'Company Details'
 data:
+  logo: p4uk/p4-logo.webp
+  favicon: p4uk/favicon.ico
   company_name: P4UK
   telephone: '(0333) 050 4624'
   out_of_hours_contact: '07986 546 076'
