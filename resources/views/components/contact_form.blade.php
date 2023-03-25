@@ -21,6 +21,8 @@
                 <label for="message" class="block mb-2 text-sm font-medium text-typo-primary">Your message</label>
                 <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-sm text-typo-primary bg-gray-50 rounded-lg border border-gray-300 shadow-sm" placeholder="Leave a comment..."></textarea>
             </div>
+            <input type="text" name="estimation" class="estimation hidden" />
+
             <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary">Send message</button>
         </form>
     </div>
