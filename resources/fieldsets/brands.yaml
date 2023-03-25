@@ -69,6 +69,7 @@ fields:
             max_files: 1
             validate:
               - required
+            folder: p4uk
         -
           handle: brand_description
           field:

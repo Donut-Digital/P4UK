@@ -20,6 +20,7 @@ sections:
           max_files: 1
           validate:
             - required
+          folder: p4uk
       -
         handle: favicon
         field:
@@ -36,6 +37,7 @@ sections:
           instructions_position: above
           visibility: visible
           max_files: 1
+          folder: p4uk
   main:
     display: Main
     fields:
