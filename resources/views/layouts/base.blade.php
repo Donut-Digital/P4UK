@@ -40,6 +40,16 @@
     <!-- Font Awesome -->
     <script defer src="https://kit.fontawesome.com/713e0a7437.js" crossorigin="anonymous"></script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L39EYQE6ZE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-L39EYQE6ZE');
+    </script>
+
 </head>
 
 <body>
