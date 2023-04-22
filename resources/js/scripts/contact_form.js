@@ -15,35 +15,42 @@ window.addEventListener("load", function()
         {
             event.preventDefault();
 
-            let form = event.target
-            let data = new FormData(form)
-
-            fetch(form.action,
-                {
-                    method: form.method,
-                    body: data,
-                    headers:
-                        {
-                            'X-CSRF-TOKEN': csrf_token.value,
-                            'X-Requested-With':'XMLHttpRequest'
-                        }
-                })
-                .then((response) =>
-                {
-                    if(response.status == 200)
-                    {
-                        contact_form_success.classList.toggle('hidden')
-
-                        email.value = '';
-                        subject.value = '';
-                        message.value = '';
-                    }
-
-                }).catch((error) =>
+            grecaptcha.ready(function()
             {
-                console.log(error)
-            });
+                grecaptcha.execute('6LcVj6olAAAAAMdMl_Id9fHhfr9KsLm6hCm-utin', {action: 'submit'}).then(function(token)
+                {
+                    console.log(token);
+                    // Add your logic to submit to your backend server here.
+                    let form = event.target
+                    let data = new FormData(form)
 
+                    fetch(form.action,
+                {
+                        method: form.method,
+                        body: data,
+                        headers:
+                            {
+                                'X-CSRF-TOKEN': csrf_token.value,
+                                'X-Requested-With':'XMLHttpRequest'
+                            }
+                    })
+                    .then((response) =>
+                    {
+                        if(response.status === 200)
+                        {
+                            contact_form_success.classList.toggle('hidden')
+
+                            email.value = '';
+                            subject.value = '';
+                            message.value = '';
+                        }
+
+                    }).catch((error) =>
+                    {
+                        console.log(error)
+                    });
+                });
+            });
         });
     }
 });

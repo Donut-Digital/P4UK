@@ -59,6 +59,7 @@
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcVj6olAAAAAMdMl_Id9fHhfr9KsLm6hCm-utin"></script>
 
 </body>
 
