@@ -41,9 +41,9 @@ class SubmitFormRecaptchaCheck implements ShouldQueue
         $recaptcha_token = $request->input('token');
         $score = $this->calculate_recaptcha_score($recaptcha_token);
 
-        if(!$score->success)
+        if($score->success)
         {
-            throw ValidationException::withMessages(['Recaptcha token error']);
+            throw ValidationException::withMessages([json_encode($score)]);
         }
     }
 
