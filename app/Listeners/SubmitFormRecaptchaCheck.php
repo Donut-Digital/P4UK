@@ -43,7 +43,7 @@ class SubmitFormRecaptchaCheck implements ShouldQueue
 
         if(!$score->success)
         {
-            throw ValidationException::withMessages([json_encode($score)]);
+            throw ValidationException::withMessages([json_encode($score),env('RE_CAPTCHA_SECRET_KEY'),$recaptcha_token]);
         }
     }
 
