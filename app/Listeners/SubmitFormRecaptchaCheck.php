@@ -41,6 +41,15 @@ class SubmitFormRecaptchaCheck implements ShouldQueue
         $recaptcha_token = $request->input('token');
         $score = $this->calculate_recaptcha_score($recaptcha_token);
 
+        if(!env('RE_CAPTCHA_SECRET_KEY'))
+        {
+            throw ValidationException::withMessages(['recaptcha secret key not set']);
+        }
+        if(!$recaptcha_token)
+        {
+            throw ValidationException::withMessages(['recaptcha token not set']);
+        }
+
         if(!$score->success)
         {
             throw ValidationException::withMessages([json_encode($score),env('RE_CAPTCHA_SECRET_KEY'),$recaptcha_token]);
