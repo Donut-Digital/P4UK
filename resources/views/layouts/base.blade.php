@@ -2,6 +2,17 @@
 
 <html lang="en" class="overflow-x-hidden">
 <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NX0TJ38W91"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NX0TJ38W91');
+    </script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,16 +50,6 @@
 
     <!-- Font Awesome -->
     <script defer src="https://kit.fontawesome.com/713e0a7437.js" crossorigin="anonymous"></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L39EYQE6ZE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-L39EYQE6ZE');
-    </script>
 
 </head>
 
